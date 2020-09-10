@@ -1,5 +1,6 @@
+const config = require("./credential.json");
 const ws = require("ws").Server,
-  chatServer = new ws({ port: 8000 });
+  chatServer = new ws({ port: config.port });
 var wsClient = [];
 var id = [];
 var username = [];
@@ -72,10 +73,5 @@ function sendAll(message) {
     clientsMngr.wsClient[i].send(message);
   }
 }
-// const chatServer = new ws.Server({ port: 8080 });
 
-// chatServer.on("connection", function connection(ws) {
-//   ws.on("message", function incoming(message) {
-//     console.log("Receive %s", message);
-//   });
-// });
+console.log("Server running on port %s.", config.port);
