@@ -55,7 +55,7 @@ function getClientIndex(ws, user) {
 }
 
 function closeClient(index, user) {
-  console.log("User id %s close", user.id[i]);
+  console.log("User id %s close", user.id[index]);
   user.wsClient.splice(index, 1);
   user.id.splice(index, 1);
   user.length--;
