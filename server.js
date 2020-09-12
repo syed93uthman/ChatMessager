@@ -111,5 +111,5 @@ function broadcast(message, except) {
   }
 }
 
-app.listen(config.portPost);
+app.listen(config.portWeb);
 console.log("Server running on port %s.", config.port);
