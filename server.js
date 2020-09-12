@@ -53,9 +53,9 @@ chatServer.on("connection", function (ws) {
   });
 
   //rescanClient(clientsMngr);
-  ws.send("User in chatroom.");
+  //ws.send("User in chatroom.");
   listAllClient(ws);
-  ws.send("State your username");
+  //ws.send("State your username");
 });
 
 function listAllClient(ws) {
