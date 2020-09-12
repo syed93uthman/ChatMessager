@@ -8,7 +8,11 @@ var socket = new WebSocket("ws://localhost:8000");
 const name = prompt("What is your name?");
 appendMessage("You joined");
 
-socket.send(name);
+try {
+  socket.send(name);
+} catch (error) {
+  socket.onopen = () => socket.send(name);
+}
 
 //const websocket = ws();
 // // Get username and room from URL
